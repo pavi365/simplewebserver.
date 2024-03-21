@@ -53,6 +53,7 @@ httpd.serve_forever()
 ```
 ## OUTPUT:
 ![image](https://github.com/pavi365/simplewebserver./assets/115135775/80964808-2b13-4c44-8300-cf45dd3d2788)
+
 ![image](https://github.com/pavi365/simplewebserver./assets/115135775/08ae3e5d-ac4e-4eda-8930-9ceb9e2049d2)
 
 
