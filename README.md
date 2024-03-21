@@ -21,12 +21,39 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
-![code](https://github.com/pavi365/simplewebserver./assets/115135775/b2bd6920-8a0c-4f78-b4f0-e2225741e80b)
-
-
+```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
+<!DOCTYPE html>
+<html>
+<head>
+<title>My webserver</title>
+</head>
+<body>
+<h1><u>Languages used iun Web Development</u><h1>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Bootstrap</li>
+</body>
+</html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',80)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+```
 ## OUTPUT:
-![out1](https://github.com/pavi365/simplewebserver./assets/115135775/86d5c09e-432c-447f-aa0e-03f5a2c6f9e9)
-![out2](https://github.com/pavi365/simplewebserver./assets/115135775/831f3b05-75ec-435d-9fb5-2eb0c7551339)
+![image](https://github.com/pavi365/simplewebserver./assets/115135775/80964808-2b13-4c44-8300-cf45dd3d2788)
+![image](https://github.com/pavi365/simplewebserver./assets/115135775/08ae3e5d-ac4e-4eda-8930-9ceb9e2049d2)
 
 
 
