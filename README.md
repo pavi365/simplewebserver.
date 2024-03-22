@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## Date:22-03-2024
 
 ## AIM:
 To develop a simple webserver to serve html pages.
@@ -22,38 +22,58 @@ Testing the webserver.
 
 ## PROGRAM:
 ```
-from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-<title>My webserver</title>
+<title> My Web Server</title>
 </head>
 <body>
-<h1><u>Languages used iun Web Development</u><h1>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Bootstrap</li>
+<h1>Top Five Revenue from Companies</h1>
+<table border=2>
+<tr>
+<th> Company Name </th>
+<th> Revenue </th>
+<th> Financial Year </th>
+</tr>
+
+<tr>
+<td> Microsoft </td>
+<td> 86$ </td>
+<td> 2014 </td>
+</tr>
+
+<tr>
+<td> Oracle </td>
+<td> 37$ </td>
+<td> 2013 </td>
+</tr>
+
+<tr>
+<td> SAP </td>
+<td> 20$ </td>
+<td> 2013 </td>
+</tr>
+
+<tr>
+<td> VMware </td>
+<td> 5.2$ </td>
+<td> 2013 </td>
+</tr>
+
+<tr>
+<td> CA Technologies </td>
+<td> 4.7$ </td>
+<td> 2013 </td>
+</tr>
+
 </body>
 </html>
-"""
-class myhandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-server_address = ('',80)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
-httpd.serve_forever()
+
+
+       
 ```
 ## OUTPUT:
-<img width="960" alt="image" src="https://github.com/pavi365/simplewebserver./assets/115135775/411cb3b6-8ed9-42fd-920c-3f4edda34818">
-
+<img width="960" alt="image" src="https://github.com/pavi365/simplewebserver./assets/115135775/b91db22e-a96f-47d0-ab28-794231e27329">
 
 
 
