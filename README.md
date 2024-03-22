@@ -52,8 +52,8 @@ print("my webserver is running...")
 httpd.serve_forever()
 ```
 ## OUTPUT:
+<img width="960" alt="image" src="https://github.com/pavi365/simplewebserver./assets/115135775/411cb3b6-8ed9-42fd-920c-3f4edda34818">
 
-![image](https://github.com/pavi365/simplewebserver./assets/115135775/08ae3e5d-ac4e-4eda-8930-9ceb9e2049d2)
 
 
 
